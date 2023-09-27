@@ -9,12 +9,30 @@
     */
 
     //ENTRADA
+    let filmes = Number(prompt("Quantos filmes voce deseja adicionar?"));
 
-    
     //PROCESSAMENTO
-    
-    
+    let fildrama = [];
+    let filcomedia = [];
+    let filromance = [];
+
+    for (let i = 0; i < filmes; i++) {
+        let nomefilme = prompt("Qual é o nome do filme?");
+        let genero = prompt("Qual o genero do filme?(C-comedia D-drama R-romance)").toUpperCase();
+        if (genero == "C") {
+            filcomedia.push(nomefilme);
+        } else if (genero == "D") {
+            fildrama.push(nomefilme);
+        } else if (genero == "R") {
+            filromance.push(nomefilme);
+        }
+    }
+    if (fildrama.length != 0) {
+        alert(`Os filmes que sao do genero DRAMA sao : ${fildrama}`);
+    } if (filcomedia.length != 0) {
+        alert(`Os filmes que sao do genero COMEDIA sao : ${filcomedia}`);
+    } if (filromance.length != 0) {
+        alert(`Os filmes que sao do genero ROMANCE sao : ${filromance}`);
+    }
     //SAÍDA
-    
-    
 </script>
