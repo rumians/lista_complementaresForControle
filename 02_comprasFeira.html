@@ -13,27 +13,27 @@
 
     Após o usuário informar a quantia vendida para cada item, calcule e apresente o faturamento do feirante.
     */
-    let tomate = Number(prompt("Quantos tomates foram vendidos ?"));
-    let batata = Number(prompt("Quantos tomates foram vendidos ?"));
-    let batatadoce = Number(prompt("Quantos tomates foram vendidos ?"));
-    let alface = Number(prompt("Quantos tomates foram vendidos ?"));
-    let cebola = Number(prompt("Quantos tomates foram vendidos ?"));
-    let cebolinha= Number(prompt("Quantos tomates foram vendidos ?"));
-    let beterraba = Number(prompt("Quantos tomates foram vendidos ?"));
 
-    let arrray = [
-        {nome:"tomate", valor:3.90}
+    let array = [
+        {nome:"tomates", valor:3.90},
+        {nome:"batatas", valor:3.40},
+        {nome:"batatasdoces", valor:4.70},
+        {nome:"alfaces", valor:1.50},
+        {nome:"cebolas", valor:2.90},
+        {nome:"cebolinhas", valor:1.40},
+        {nome:"beterrabas", valor:4.10}
     ];
     //ENTRADA
 
 
     //PROCESSAMENTO
-    for (let i = 0; i < arrray.length; i++) {
-        let produto = arrray[i].nome;
-        let preço = arrray[i].valor
-        
+    let faturamento = 0;
+    for (let i = 0; i < array.length; i++) {
+        let valores = Number(prompt(`Quantos ${array[i].nome} voce vendeu ?`));
+        faturamento += array[i].valor * valores;
     }
-    
+
+
     //SAÍDA
-    
+    alert(`O fatumarento vai ser de R$${faturamento}`);
 </script>
