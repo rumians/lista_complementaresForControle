@@ -11,14 +11,18 @@
 
 
     let resultado = 0;
+    let investimento = 0;
     //PROCESSAMENTO
     for (let i = 1; i <= 96; i++) {
+        investimento += 100;
         resultado += 100 * 0.018;
         if ( i == 24 ) {
-            alert(`o rendimento é ${resultado} em 24 meses`)
+            alert(`o rendimento é ${resultado.toFixed(2)} em 24 meses, e o total investido é ${investimento}`);
+        } if (i == 48) {
+            alert(`o rendimento é ${resultado.toFixed(2)} em 48 meses, e o total investido é ${investimento}`);
+        } if (i == 96) {
+            alert(`o rendimento é ${resultado.toFixed(2)} em 96 meses, e o total investido é ${investimento}`);
         }
     }
-    
     //SAÍDA
-    
 </script>
